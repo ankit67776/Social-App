@@ -1,0 +1,14 @@
+.image-preview-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .image-preview {
+    max-width: 100%;
+    max-height: 300px; /* Ensure the image doesn't overflow the modal */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+  }
+  

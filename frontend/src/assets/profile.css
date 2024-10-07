@@ -1,0 +1,89 @@
+.profile-page {
+    display: flex;
+    background-color: #f5f8fa;
+  }
+  
+  .sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-right: 1px solid #e1e8ed;
+    position: fixed;
+    height: 100vh;
+  }
+  
+  .profile-content {
+    margin-left: 270px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #e1e8ed;
+    padding-bottom: 20px;
+  }
+  
+  .cover-photo {
+    width: 100%;
+    height: 150px;
+    background-color: #1da1f2;
+    border-bottom: 2px solid #e1e8ed;
+  }
+  
+  .profile-avatar {
+    position: absolute;
+    top: 90px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profile-details {
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .profile-details h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .username {
+    color: #657786;
+    margin-top: 5px;
+  }
+  
+  .details {
+    margin: 5px 0;
+    color: #657786;
+    font-size: 14px;
+  }
+  
+  .follow-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .tweets-section {
+    margin-top: 20px;
+  }
+  
+  .tweets-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+
+

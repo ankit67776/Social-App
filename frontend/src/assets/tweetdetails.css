@@ -1,0 +1,31 @@
+.tweet-details {
+    max-width: 100%;
+    overflow: auto; /* Add this to ensure content doesn't overflow */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .tweet-card {
+    max-width: 100%;
+    margin: 0 auto;
+    /* Other styling rules */
+  }
+  
+  .tweet-content {
+    word-wrap: break-word; /* Ensure long words break and don't overflow */
+  }
+  
+  .tweet-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  .tweet-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+      
