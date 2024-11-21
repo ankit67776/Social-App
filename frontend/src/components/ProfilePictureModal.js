@@ -34,7 +34,7 @@ const ProfilePictureModal = ({ show, handleClose, userId, loggedInUser, setUserP
 
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/user/${userId}/uploadProfilePic`,
+        `https://social-app-ek2z.onrender.com/api/user/${userId}/uploadProfilePic`,
         formData,
         {
           headers: {
