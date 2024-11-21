@@ -34,13 +34,13 @@ function ProfilePage() {
     }
 
     try {
-      const profileResponse = await axios.get(`http://localhost:3000/api/user/${id}`, {
+      const profileResponse = await axios.get(`https://social-app-ek2z.onrender.com/api/user/${id}`, {
         headers: {
           Authorization: `Bearer ${loggedInUser.token}`,
         },
       });
 
-      const tweetResponse = await axios.get(`http://localhost:3000/api/user/${id}/tweets`, {
+      const tweetResponse = await axios.get(`https://social-app-ek2z.onrender.com/api/user/${id}/tweets`, {
         headers: {
           Authorization: `Bearer ${loggedInUser.token}`,
         },
@@ -61,8 +61,8 @@ function ProfilePage() {
   const handleFollowToggle = async () => {
     try {
       const endpoint = isFollowing
-        ? `http://localhost:3000/api/user/${id}/unfollow`
-        : `http://localhost:3000/api/user/${id}/follow`;
+        ? `https://social-app-ek2z.onrender.com/api/user/${id}/unfollow`
+        : `https://social-app-ek2z.onrender.com/api/user/${id}/follow`;
 
       setIsFollowing(!isFollowing);
       setFollowersCount((prevCount) => (isFollowing ? prevCount - 1 : prevCount + 1));
@@ -82,7 +82,7 @@ function ProfilePage() {
 
   const handleDelete = async (tweetId) => {
     try {
-      await axios.delete(`http://localhost:3000/api/tweet/${tweetId}`, {
+      await axios.delete(`https://social-app-ek2z.onrender.com/api/tweet/${tweetId}`, {
         headers: {
           Authorization: `Bearer ${loggedInUser.token}`,
         },
@@ -105,7 +105,7 @@ function ProfilePage() {
 
   const handleSaveProfile = async (updatedProfile) => {
     try {
-      const response = await axios.put(`http://localhost:3000/api/user/${id}`, updatedProfile, {
+      const response = await axios.put(`https://social-app-ek2z.onrender.com/api/user/${id}`, updatedProfile, {
         headers: {
           Authorization: `Bearer ${loggedInUser.token}`,
         },
@@ -139,7 +139,7 @@ function ProfilePage() {
           <div className="profile-header">
             <div className="cover-photo"></div>
             <img
-              src={userProfile.profilePicture ? `http://localhost:3000${userProfile?.profilePicture}` : '/default-avatar.png'}
+              src={userProfile.profilePicture ? `https://social-app-ek2z.onrender.com${userProfile?.profilePicture}` : '/default-avatar.png'}
               alt="Profile Avatar"
               className="profile-avatar"
               onClick={handleOpenProfilePictureModal} // Open modal on click
