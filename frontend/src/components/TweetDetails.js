@@ -23,7 +23,7 @@ function TweetDetails() {
 
         const fetchTweet = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/tweet/${tweetId}`, {
+                const response = await axios.get(`https://social-app-ek2z.onrender.com/api/tweet/${tweetId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
