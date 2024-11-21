@@ -13,7 +13,7 @@ function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/login', { username, password });
+      const response = await axios.post('https://social-app-ek2z.onrender.com/api/auth/login', { username, password });
       localStorage.setItem('user', JSON.stringify(response.data));
       toast.success('Logged in successfully');
       navigate('/home');
