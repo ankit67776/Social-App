@@ -39,7 +39,7 @@ function TweetCard({ tweet, onDelete, onReply = () => {} }) {
       }
 
       const response = await axios.post(
-        `http://localhost:3000/api/tweet/${tweet._id}/reply`,
+        `https://social-app-ek2z.onrender.com/api/tweet/${tweet._id}/reply`,
         formData,
         {
           headers: {
@@ -67,8 +67,8 @@ function TweetCard({ tweet, onDelete, onReply = () => {} }) {
       }
 
       const endpoint = isLiked
-        ? `http://localhost:3000/api/tweet/${tweet._id}/dislike`
-        : `http://localhost:3000/api/tweet/${tweet._id}/like`;
+        ? `https://social-app-ek2z.onrender.com/api/tweet/${tweet._id}/dislike`
+        : `https://social-app-ek2z.onrender.com/api/tweet/${tweet._id}/like`;
 
       const response = await axios.post(
         endpoint,
@@ -101,7 +101,7 @@ function TweetCard({ tweet, onDelete, onReply = () => {} }) {
 
 
       const response = await axios.post(
-        `http://localhost:3000/api/tweet/${tweet._id}/retweet`,
+        `https://social-app-ek2z.onrender.com/api/tweet/${tweet._id}/retweet`,
         {},
         {
           headers: {
@@ -122,7 +122,7 @@ function TweetCard({ tweet, onDelete, onReply = () => {} }) {
     }
   };
 
-  const baseURL = 'http://localhost:3000';
+  const baseURL = 'https://social-app-ek2z.onrender.com';
   const imageURL = tweet.image ? `${baseURL}${tweet.image}` : null;
 
   // Determine if it's a retweet and get the original tweet data
@@ -147,7 +147,7 @@ function TweetCard({ tweet, onDelete, onReply = () => {} }) {
       
       <div className="tweet-header">
         <img
-          src={`http://localhost:3000${originalTweet?.tweetedBy?.profilePicture}` || '/default-avatar.png'}
+          src={`https://social-app-ek2z.onrender.com${originalTweet?.tweetedBy?.profilePicture}` || '/default-avatar.png'}
           alt="User Avatar"
           className="tweet-avatar"
           onClick={handleUserClick}
