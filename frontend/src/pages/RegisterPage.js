@@ -16,7 +16,7 @@ function RegisterPage() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/api/auth/register', {name, username, password, email });
+      await axios.post('https://social-app-ek2z.onrender.com/api/auth/register', {name, username, password, email });
       toast.success('Registered successfully');
       navigate('/login');
     } catch (error) {
