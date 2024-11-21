@@ -25,7 +25,7 @@ function HomePage() {
       return;
     }
     try { 
-      const response = await axios.get('http://localhost:3000/api/tweet', {
+      const response = await axios.get('https://social-app-ek2z.onrender.com/api/tweet', {
         headers: {
           Authorization: `Bearer ${loggedInUser.token}`,
         },
@@ -53,7 +53,7 @@ function HomePage() {
     if (tweetImage) formData.append('image', tweetImage);
   
     try {
-      const response = await axios.post('http://localhost:3000/api/tweet', formData, {
+      const response = await axios.post('https://social-app-ek2z.onrender.com/api/tweet', formData, {
         headers: {
           Authorization: `Bearer ${loggedInUser.token}`,
           'Content-Type': 'multipart/form-data',
@@ -73,7 +73,7 @@ function HomePage() {
     const loggedInUser = JSON.parse(localStorage.getItem('user'));
 
     try {
-      await axios.delete(`http://localhost:3000/api/tweet/${tweetId}`, {
+      await axios.delete(`https://social-app-ek2z.onrender.com/api/tweet/${tweetId}`, {
         headers: {
           Authorization: `Bearer ${loggedInUser.token}`,
         },
