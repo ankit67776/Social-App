@@ -16,7 +16,7 @@ const app = express();
 app.use(cookieParser());
 
 app.use(cors({
-    origin : 'http://localhost:3001',
+    origin: ["http://localhost:3001", "https://social-app-9upa.vercel.app"],
     credentials : true
 }));
 
